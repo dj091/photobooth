@@ -1,0 +1,29 @@
+.home {
+    background: url(../images/home-body-bg.jpg) no-repeat;
+    background-size: cover;
+    @include small-laptop() {
+        background-position: 24%;
+    }
+    @include media-breakpoint-up(xl) {
+        background-attachment: fixed;
+    }
+    @include media-breakpoint-down(xl) {
+        background-image: url(../images/home-body-bg-mobile.jpg);
+    }
+    
+    .body-content {
+        padding: 15rem 0;
+        @include media-breakpoint-down(xl) {
+            padding-bottom: 6rem;
+            padding-top: 0;
+        }
+    }
+    .site-footer {
+        background-color: #F7F4F0;
+    }
+    .text-block {
+        max-width: 43rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,42 @@
+.icon-block {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-block--facebook {
+    background-image: url(../images/icons/facebook.svg);
+    width: 1rem;
+    height: 2rem;
+}
+
+.icon-block--twitter {
+    background-image: url(../images/icons/twitter.svg);
+    width: 2rem;
+    height: 1.7rem;
+}
+
+.icon-block--instagram {
+    background-image: url(../images/icons/instagram.svg);
+    @include square(2rem);
+}
+
+.icon-block--camera {
+    background-image: url(../images/icons/camera.png);
+    @include square(7.36rem);
+    @include media-breakpoint-down(md) {
+        @include square(3.2rem);
+    }
+}
+
+.icon-block--arrow-left {
+    background-image: url(../images/icons/angle-left.svg);
+    width: 0.7rem;
+    height: 1.2rem;
+}
+
+.icon-block--arrow-right {
+    background-image: url(../images/icons/angle-right.svg);
+    width: 0.7rem;
+    height: 1.2rem;
+}

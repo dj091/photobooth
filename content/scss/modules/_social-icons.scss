@@ -1,0 +1,17 @@
+.social-icons {
+    align-items: center;
+    
+    li {
+        margin-right: 1.25rem;
+        @include transition(350ms ease-in-out);
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            @include translate(0,-0.5rem);
+        }
+    }
+ 
+}
+
+

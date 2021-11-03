@@ -1,0 +1,146 @@
+.photobooth-content {
+    min-height: 78vh;
+    font-size: 1.3125rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.125rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        min-height: 70vh;
+    }
+
+    @include media-breakpoint-down(md) {
+        min-height: 52vh;
+    }
+}
+
+
+
+.card--photobooth {
+    max-width: 38.75rem;
+    min-height: 34rem;
+
+    @include small-laptop() {
+        max-width: 34rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        min-height: 20rem;
+    }
+
+    .card-title {
+        max-width: 28rem;
+    }
+}
+
+
+.photobooth__step1 {
+    margin: 3.8rem 2.75rem 2.75rem;
+
+    @include small-laptop() {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin: 1.5rem 0;
+    }
+}
+
+.photobooth__step2 {
+    h3 {
+        font-size: 1.6875rem;
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.5625rem;
+        }
+    }
+}
+
+.photobooth__user-img {
+    min-height: 36rem;
+    border: 1px solid #B2B2B2;
+    object-fit: cover;
+    @include border-radius(0.625rem);
+
+    @include small-laptop() {
+        min-height: 27rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        min-height: 18rem;
+    }
+
+    img {
+        @include square(100%);
+        @include border-radius(0.625rem);
+    }
+}
+
+.photobooth__step {
+    display: none;
+}
+
+.photobooth__step--active {
+    display: block;
+}
+
+.photobooth__frames-wrapper {
+    background-color: $gray-200;
+    height: 7.5rem;
+    padding: 0.625rem;
+    @include border-radius(0.9375rem);
+
+    @include media-breakpoint-down(md) {
+        height: 5rem;
+        @include border-radius(0.75rem);
+    }
+
+
+      .owl-stage img {
+        cursor: pointer;
+        width: 6.25rem;
+    }
+
+
+}
+
+.photobooth__select-stickers {
+    .photobooth__frames-wrapper {
+        .owl-stage img {
+            max-height: 5.5rem;
+            width: auto;
+            margin: 0.3rem auto;
+
+            @include media-breakpoint-down(md) {
+                max-height: 3.4rem;
+            }
+        }
+    }
+}
+
+.btn--back {
+    @include media-breakpoint-up(md) {
+        font-size: 1.3125rem;
+    }
+}
+
+.btn--next {
+    @include media-breakpoint-up(md) {
+        font-size: 1.4375rem;
+        padding: 0.2rem 1.4rem;
+    }
+}
+
+
+.photobooth__share {
+    .btn {
+        @include media-breakpoint-down(md) {
+            display: block;
+            min-width: 9rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

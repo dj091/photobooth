@@ -1,0 +1,12 @@
+.program-list {
+    @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+    }
+    
+    li {
+        margin-top: 0.5rem;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

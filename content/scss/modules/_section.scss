@@ -1,0 +1,34 @@
+.partners-list {
+    margin-left: -10px;
+    width: calc(100% + 20px);
+    
+    .partners-list__item {
+        padding: 0 10px;
+    }
+
+    h4 {
+        @include small-laptop() {
+            font-size: 1.1rem;
+        }
+
+        @include media-breakpoint-down(xl) {
+            font-size: 1rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 9px;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+}
+
+
+.partners-list__item:nth-child(5) {
+    img {
+        @include media-breakpoint-down(md) {
+            max-width: 15rem;
+        }
+
+    }
+}

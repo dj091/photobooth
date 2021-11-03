@@ -1,0 +1,47 @@
+.menu-bar {
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    @include transition(350ms);
+
+    .menu-bar__line {
+        height: 4px;
+        width: 36px;
+        margin-bottom: 8px;
+        background: rgb(180, 129, 66);
+        background: -moz-linear-gradient(-45deg, rgba(180, 129, 66, 1) 0%, rgba(169, 118, 52, 1) 10%, rgba(169, 116, 46, 1) 20%, rgba(171, 117, 47, 1) 30%, rgba(169, 114, 50, 1) 50%, rgba(166, 113, 47, 1) 100%);
+        background: -webkit-linear-gradient(-45deg, rgba(180, 129, 66, 1) 0%, rgba(169, 118, 52, 1) 10%, rgba(169, 116, 46, 1) 20%, rgba(171, 117, 47, 1) 30%, rgba(169, 114, 50, 1) 50%, rgba(166, 113, 47, 1) 100%);
+        background: linear-gradient(135deg, rgba(180, 129, 66, 1) 0%, rgba(169, 118, 52, 1) 10%, rgba(169, 116, 46, 1) 20%, rgba(171, 117, 47, 1) 30%, rgba(169, 114, 50, 1) 50%, rgba(166, 113, 47, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b48142', endColorstr='#a6712f', GradientType=1);
+        display: block;
+        position: relative;
+        @include transition(all 0.15s cubic-bezier(0.63, 0.62, 0.48, 1.64) 0.1s);
+        @include transform(rotateZ(0deg) translateX(0px) translateY(0px));
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.menu-bar__line--second {
+            @include transform(none);
+        }
+    }
+
+    &.is--active {
+        @include translate(0, 4px);
+
+        .menu-bar__line {
+            &.menu-bar__line--second {
+                opacity: 0;
+            }
+
+            &.menu-bar__line--first {
+                @include transform(rotateZ(51deg) translateX(3px) translateY(2px) !important);
+            }
+
+            &.menu-bar__line--third {
+                @include transform(rotateZ(-50deg) translateX(15px) translateY(-12px) !important);
+            }
+        }
+    }
+}

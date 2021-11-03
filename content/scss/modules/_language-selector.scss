@@ -1,0 +1,55 @@
+.language-selector {
+    top: -2px;
+    
+    &.is--active {
+        .language-selector__item {
+            opacity: 1;
+        }
+    }
+
+    span {
+        font-weight: 500;
+        cursor: pointer;
+        @include transition(350ms ease-in-out);
+        @include square(2.1875rem);
+    }
+
+    .lang-chinese {
+        font-size: 0.9375rem;
+    }
+}
+
+.language-selector__item {
+    border: 1px solid $dark;
+    color: $dark;
+    font-size: 1.125rem;
+    position: absolute;
+    top: 3rem;
+    opacity: 0;
+
+    &.is--active {
+        color: #fff;
+        background-color: $dark;
+        position: static;
+        opacity: 1;
+    }
+}
+
+
+html[lang='zh'] {
+    .text-block__badge {
+        @include media-breakpoint-up(xl) {
+        font-size: 2.1rem;
+        }
+    }
+    .body-content *[lang='en'], .site-footer *[lang='en'], #main-navigation[lang='en'] {
+        display: none !important;
+    }
+}
+
+
+html[lang='en'] {
+    .body-content *[lang='zh'], .site-footer *[lang='zh'], #main-navigation[lang='zh'] {
+        display: none !important;
+    }
+}

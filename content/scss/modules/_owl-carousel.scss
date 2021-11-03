@@ -1,0 +1,14 @@
+.owl-nav {
+    button {
+        @include vertically-centered();
+        &.disabled {
+            opacity: 0.2;
+        }
+    }
+    .owl-next {
+        right: 0.8rem;
+    }
+    .owl-prev {
+        left: 0.8rem;
+    }
+}

@@ -1,0 +1,44 @@
+@include media-breakpoint-up(xl) {
+
+    .orchard-road-logo {
+        max-width: 8.625rem;
+    }
+
+    .hitachi-logo {
+        max-width: 13.125rem;
+    }
+
+    .mastercard-logo {
+        max-width: 8.375rem;
+    }
+
+    .tudor-logo {
+        max-width: 11.375rem;
+    }
+
+    .oue-logo {
+        max-width: 9rem;
+    }
+
+    .lazada-logo {
+        max-width: 12rem;
+    }
+
+    .qadvertising-logo {
+        max-width: 7.2rem;
+    }
+
+    .hexon-logo {
+        max-width: 10.9375rem;
+    }
+
+}
+
+
+.hitachi-logo-text {
+    top: -1px;
+
+    img {
+        max-width: 7.5rem;
+    }
+}

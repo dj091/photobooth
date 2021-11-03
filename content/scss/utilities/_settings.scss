@@ -1,0 +1,191 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none !important;
+}
+
+::-moz-selection {
+    background: $primary;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: $primary;
+    color: #fff;
+    text-shadow: none;
+}
+
+// Small Systems
+@mixin small-laptop {
+    @media (max-width: 1550px) and (min-width: 1200px) {
+        @content;
+    }
+}
+
+
+html,
+body {
+    line-height: 1.5;
+    font-size: 16px;
+
+    @media (max-width: 1800px) and (min-width: 1551px) {
+        font-size: 14.5px;
+    }
+
+    @include small-laptop() {
+        font-size: 13.5px;
+    }
+}
+
+body {
+    min-height: 100vh;
+    background: #fff url(../images/body-bg.jpg) no-repeat  center 10vh;
+    background-size: cover;
+    @include media-breakpoint-up(xl) {
+        background-attachment: fixed;
+    }
+    @include media-breakpoint-down(md) {
+        background-image: url(../images/body-bg-mobile.jpg);
+        background-position: top left;
+    }
+}
+
+
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+a {
+    color: #3d93fe;
+    text-decoration: none;
+    @include transition(350ms ease-in-out);
+}
+
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+
+    &.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    &.alignleft {
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &.alignright {
+        float: right;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid rgba($primary, 0.2);
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+
+p {
+    font-family: georgia, sans-serif;
+    text-align: justify;
+    font-size: 1.3rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.75rem;
+
+    @include media-breakpoint-down(lg) {
+        font-size: 2rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.875rem;
+    }
+}
+
+
+.container {
+    max-width: 107rem;
+    width: 100%;
+}
+
+.container-fluid {
+    @include media-breakpoint-up(md) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @media (min-width: 1440px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+
+.body-content {
+    padding: 9rem 0 4rem;
+    min-height: 70vh;
+    @include small-laptop() {
+        padding-top: 6rem;
+    }
+    
+    @include media-breakpoint-down(md) {
+        padding-top: 7rem;
+    }
+}
+
+
+.body-content__icon {
+    margin-top: -2.5rem;
+    max-width: 75%;
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+    }
+}

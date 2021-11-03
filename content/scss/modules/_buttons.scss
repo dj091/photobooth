@@ -1,0 +1,25 @@
+.btn-primary {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0.2rem 1.7rem;
+    border: 0;
+    background: transparent linear-gradient(66deg, #9A6226 2%, #BB8C40 24%, #CFA75E 35%, #DDBA72 43%, #CF963F 66%, #A36D2D 89%, #8C5924 100%) 0% 0% no-repeat padding-box;
+    @include border-radius(3rem);
+    @include shadow(none !important);
+    @include small-laptop() {
+        font-size: 1.3rem;
+    }
+    @include media-breakpoint-down(lg) {
+        font-size: 1.4375rem;
+        padding: 0.3rem 1.5rem;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 1.25rem;
+        padding: 0.2rem 1rem;
+    }
+
+    &:hover,
+    &:focus {
+        background-image: linear-gradient(132deg, #8C5924 2%, #A36D2D 24%, #CF963F 35%, #DDBA72 43%, #CFA75E 66%, #BB8C40 89%, #9A6226 100%);
+    }
+}
